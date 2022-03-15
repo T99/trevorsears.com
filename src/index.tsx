@@ -8,13 +8,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HomePage } from "./react/pages/home-page";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Routes>
-			
+				<Route index element={<Navigate replace to="/home" />} />
+				<Route path="/index" element={<Navigate replace to="/home" />} />
+				<Route path="/home" element={<HomePage />} />
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>,
