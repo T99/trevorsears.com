@@ -10,4 +10,31 @@ header {
 	
 	@include expandToMaxWidth();
 	
+	nav {
+		
+		display: flex;
+		justify-content: flex-end;
+		
+		a {
+			
+			font-family: "Fira Code", monospace;
+			text-decoration: none;
+			transition: 100ms color ease-out;
+			
+			&:hover {
+				
+				color: var(--color-hi);
+				
+			}
+			
+		}
+		
+		& > .nav-item {
+			
+			
+			
+		}
+		
+	}
+	
 }
