@@ -4,18 +4,18 @@
  * Project: trevorsears.com
  */
 
-$backgroundColor: #282C34;
-$foregroundColor: white;
-$firstBlue: #0066B3;
-$firstRed: #ED1C24;
+$pageWidth: 1200px;
+
+$backgroundColor: #29335C;
+$foregroundColor: #F6E8EA;
+$highlightColor:  #E4572E;
 
 :root {
 	
 	--page-width: #{$pageWidth};
 	--color-bg: #{$backgroundColor};
 	--color-fg: #{$foregroundColor};
-	--color-first-blue: #{$firstBlue};
-	--color-first-red: #{$firstRed};
+	--color-hi: #{$highlightColor};
 	
 }
 
