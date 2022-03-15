@@ -11,13 +11,15 @@ import { Page } from "../elements/page-flow/page";
 export type Props = Readonly<{}>;
 export type State = Readonly<{}>;
 
-export class Home extends React.Component<Props, State> {
+export class HomePage extends React.Component<Props, State> {
 	
 	public render(): React.ReactNode {
 		
 		return (
 			<Page name="home">
-			
+				<section className="hello">
+					<h1>Hi!<br />I'm <span className="highlight">Trevor</span>.</h1>
+				</section>
 			</Page>
 		);
 		
