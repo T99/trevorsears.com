@@ -1,7 +1,7 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 8:31 PM -- November 15th, 2021
- * Project: raptors1711.com
+ * 3:23 PM -- March 12, 2022.
+ * Project: trevorsears.com
  */
 
 import "./page.scss";
