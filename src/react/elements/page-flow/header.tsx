@@ -7,17 +7,27 @@
 import "./header.scss";
 import React from "react";
 import { CommandPalette } from "../command-palette";
+import { Link } from "react-router-dom";
+
+export type HeaderLinks = {
+	
+	[title: string]: string | { [name: string]: string };
+	
+};
 
 export type Props = Readonly<{}>;
 export type State = Readonly<{}>;
 
 export class Header extends React.Component<Props, State> {
 	
-	public static readonly HEADER_LINKS: 
+	public static readonly HEADER_LINKS: HeaderLinks = {
+		"/home": "/home",
+		"/contact": "/contact"
+	}
     
     public render(): React.ReactNode {
 		
-		let navigationContent: React.ReactNode = Object.entries(this.props.links).map(
+		let navigationContent: React.ReactNode = Object.entries(Header.HEADER_LINKS).map(
 			(entry: [string, string | { [name: string]: string }]): React.ReactNode => {
 				
 				let navTitle: string = entry[0];
@@ -33,7 +43,7 @@ export class Header extends React.Component<Props, State> {
 						</div>
 					);
 					
-					// For a link with a submenu.
+				// For a link with a submenu.
 				} else {
 					
 					let primaryLink: string | undefined = entry[1][navTitle];
@@ -69,7 +79,7 @@ export class Header extends React.Component<Props, State> {
 			<header>
 				<CommandPalette />
 				<nav>
-					
+					{navigationContent}
 				</nav>
 			</header>
 		);
