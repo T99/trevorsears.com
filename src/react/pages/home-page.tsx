@@ -18,7 +18,9 @@ export class HomePage extends React.Component<Props, State> {
 		return (
 			<Page name="home">
 				<section className="hello">
-					<h1>Hi!<br />I'm <span className="highlight">Trevor</span>.</h1>
+					<div className="width-wrapper">
+						<h1>Hi!<br />I'm <span className="highlight">Trevor</span>.</h1>
+					</div>
 				</section>
 			</Page>
 		);
